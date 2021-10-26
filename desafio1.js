@@ -33,11 +33,13 @@ function comb2(array, target)
 {
     let pos1 = 0;
     let pos2 = 0;
+    let dif;
 
     while (pos1 < array.length) {
         pos2 = pos1 + 1;
+        dif = target - array[pos1];
         while (pos2 < array.length){
-            if (array[pos1] + array[pos2] === target)
+            if (array[pos2] === dif)
                 console.log(array[pos1].toString() + "[" + pos1.toString() +  "]", array[pos2].toString() + "[" + pos2.toString() +  "]");
             pos2++;
         }
